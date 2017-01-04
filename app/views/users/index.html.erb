@@ -1,0 +1,16 @@
+<h1>Welcome!</h1>
+<p>Find me in app/views/register_users/index.html.erb</p>
+
+<div class='login-form'>
+  <div class='login-form-background'>
+  <%= render "layouts/login_form" %>
+  </div>
+  <div class='flash'><%= flash[:login] %></div>
+</div>
+
+
+<div class='registration-form'>
+<%= render "layouts/register_form" %>
+</div>
+
+<div class='flash'><%= flash[:register] %></div>

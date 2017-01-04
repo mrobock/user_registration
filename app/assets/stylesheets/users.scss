@@ -1,0 +1,21 @@
+// Place all the styles related to the register_users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.register_label {
+  display: block;
+}
+
+.flash {
+  margin-top: 2em;
+  color: red;
+}
+
+.login-form {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.login-form-background {
+  background-color: gray;
+}

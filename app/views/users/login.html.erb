@@ -1,0 +1,40 @@
+<h1>Hello <%= @user.user_id %></h1>
+
+<div class='user_profile'>
+  <p>Name: <%= @user.name %></p>
+  <p>Address: <%= @user.address %></p>
+  <p>City: <%= @user.city %></p>
+  <p>State: <%= @user.state %></p>
+  <p>Zip: <%= @user.zip %></p>
+  <p>Country: <%= @user.country %></p>
+  <p>Email: <%= @user.email %></p>
+  <p>User ID: <%= @user.user_id %></p>
+</div>
+
+<div class='add_phone'>
+  <form action='/users/add_phone' method='post'>
+    <input type='text' name='number' placeholder="Phone Number" />
+    <input type='submit' value='Add Phone' />
+  </form>
+  <%= flash[:phone] %>
+</div>
+
+<div class='phone_table'>
+  <%= flash[:user_phones] %>
+  <table>
+    <thead>
+      <tr>
+        <th>Phone ID</th>
+        <th>Phone Number</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @user.phones.each do |phone| %>
+      <tr>
+        <td><%= phone.id %></td>
+        <td><%= phone.number %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
